@@ -12,7 +12,7 @@ setuptools.setup(
     author_email="{{ cookiecutter.author_email }}",
 
     description="{{ cookiecutter.package_description }}",
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
 
     packages=setuptools.find_packages(),
 
