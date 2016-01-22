@@ -1,8 +1,11 @@
 import setuptools
 
+# Fetch the version from the version.py file
+execfile('./version.py')
+
 setuptools.setup(
     name="{{ cookiecutter.package_name }}",
-    version="{{ cookiecutter.package_version }}",
+    version=__version__,
     url="{{ cookiecutter.package_url }}",
 
     author="{{ cookiecutter.author_name }}",
