@@ -1,7 +1,7 @@
 import setuptools
 
 # Fetch the version from the version.py file
-execfile('./version.py')
+exec(open('./version.py').read())
 
 setuptools.setup(
     name="{{ cookiecutter.package_name }}",
