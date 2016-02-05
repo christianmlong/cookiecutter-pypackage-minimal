@@ -14,9 +14,9 @@ import ConfigParser as configparser
 package_dir = os.path.dirname(__file__)
 config_file_name = 'config.ini'
 config_file_path = os.path.join(package_dir, config_file_name)
-CONFIG = configparser.ConfigParser()
-CONFIG.read(config_file_path)
-DEBUG_LOG = CONFIG.getboolean('misc', 'debug_log')
+config = configparser.ConfigParser()
+config.read(config_file_path)
+debug_log = config.getboolean('misc', 'debug_log')
 
 logging.basicConfig()
 LOG = logging.getLogger('{{ cookiecutter.package_name }}')
@@ -27,7 +27,7 @@ LOG = logging.getLogger('{{ cookiecutter.package_name }}')
 # exceptions) to its own log files, located at /var/log/ciam/{{ cookiecutter.package_name }}.
 LOG_DIR = '/var/log/ciam/{{ cookiecutter.package_name }}'
 
-if DEBUG_LOG:
+if debug_log:
     LOG.setLevel(logging.DEBUG)
 else:
     LOG.setLevel(logging.INFO)
