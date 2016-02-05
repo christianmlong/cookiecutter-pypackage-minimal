@@ -2,3 +2,6 @@ pytest
 bumpversion
 pylint
 ipdb
+pip
+setuptools
+wheel
