@@ -1,0 +1,4 @@
+"""
+    Configuration for py.test
+"""
+
